@@ -3,5 +3,5 @@ the game of solve-this-plus based on javascript (中文名称:激问)。The game
 
 play online: https://unionline.top/html/jiwen/
 
-![jiwen0](.\jiwen0.png)
+![jiwen0](https://unionline.top/html/jiwen/src/images/jiwen0.png)
 
