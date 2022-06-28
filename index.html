@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>
+			Unionline's JS SolveThisPlus V0.9
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+		<meta name="format-detection" content="telephone=no" />
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="Content-Type" content="text/html">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta content="telephone=no" name="format-detection">
+		<!--UC默认竖屏，UC强制全屏-->
+		<meta name="full-screen" content="yes">
+		<meta name="browsermode" content="application">
+		<!--QQ强制竖屏QQ强制全屏-->
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="x5-page-mode" content="app">
+		<meta name="format-detection" content="email=no" />
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="./src/css/basic.css">
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+		</script>
+		<script src="src/js/map.js">
+		</script>
+		<script src="src/js/core.js">
+		</script>
+		<style>
+		</style>
+		<script>
+		</script>
+	</head>
+	<body>
+		<header>
+			<h2>激问(SolveThisPlus) JS版</h2>
+			<a href="./tool/mkmap.html">
+				跳转=>地图绘制器
+			</a>
+			<p>
+				level:
+				<select id="changeLevel" onclick="changeLevel()">
+					<!--<option value="0"selected>tutor</option><option value="1">Level 01</option><option value="2">Level 02</option><option value="3">Level 03</option><option value="4">Level 04</option><option value="5">Level 05</option>-->
+				</select>
+				<a href="javascript:void(0);" id="newGame" onclick="newGame()">
+				开始游戏
+			</a>
+			</p>
+			<div>
+				<button onclick="changeLevelManual(-1)">
+					上一关
+				</button>
+				<button onclick="changeLevelManual(0)">
+					重玩
+				</button>
+				<button onclick="changeLevelManual(1)">
+					下一关
+				</button>
+			</div>
+			<p>
+				steps:
+				<span id="score">
+					0
+				</span>
+			</p>
+		</header>
+		<div id="grid-container" style="width: 200px;height: 200px;padding: 20px; border: solid 1px;">
+		</div>
+		<div> 
+			<button id="stepStart" onclick="changeStepForPlayback(0)">|<<</button>
+			<button id="stepPrevious" onclick="changeStepForPlayback(7)"><</button>
+			<button id="stepNext" onclick="changeStepForPlayback(8)">></button>
+			<button id="stepEndStart" onclick="changeStepForPlayback(-1)">>>|</button>
+		</div>
+		  <div>状态：<span id="tip">初始化完成</span>
+		  	<!-- <span id="tip2"></span> --></div>
+	</body>
+
+</html>

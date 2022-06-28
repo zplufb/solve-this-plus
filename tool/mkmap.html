@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>solveThis+map generator
+		</title>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script> -->
+         <!-- <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script> -->
+        <script src="./src/js/gen.js">
+		</script>
+        <style>
+            td {
+                border: 1px solid#777
+            }
+        </style>      
+    </head>
+    <body>
+         <div>   <a href="../index.html">返回首页</a></div>
+        <h3>This is a map generator for solveThis+</h3>
+		<div id="left"></div>
+        <div>
+            当前颜色->
+            <b>
+                <span id="currentColor" color="black">障碍物块黑色</span>
+            </b>
+            <div>
+                <button onclick="changeColor(-1)">切换障碍物块（黑色）
+			</button>
+                <button onclick="changeColor(1)">切换起点块（绿色）
+			</button>
+                <button onclick="changeColor(2)">切换终点块（灰色）
+			</button>
+            </button>
+                <button onclick="changeColor(0)">清除颜色
+            </button>
+            </div>
+            <button id="get_char_pos">获取字符坐标
+		</button>
+            <button id="clear_all_red">清除所有坐标
+		</button>
+		<div>地图生成： <span id="result"></span>
+            </div>
+            <input click-type="copy" onclick="$(this).attr('data-clipboard-text',$('#result').text())" style="color:green" type="button" value="复制">
+            <div>状态：<span id="status">初始化完成</span></div>
+    </body>
+</html>
